@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>Rover Controller</title>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script>
+  $(function() {
+    $( "#slider-range-min" ).slider({
+      range: "min",
+      value: 37,
+      min: 1,
+      max: 700,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+  });
+  </script>
 </head>
 <body>
 <h1>Rover Controller</h1>
+
+<p>
+  <label for="amount">Maximum price:</label>
+  <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<div id="slider-range-min"></div>
+
+
 
 <span>Forward: <input type="button" onclick="goForward()" id="forward" value="Forward"> </span><br>
 <span>Stop: <input type="button" onclick="stopNow()" id="stop" value="Stop"> </span>
