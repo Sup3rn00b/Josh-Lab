@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Rover Controller</title>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
   <script>
@@ -14,6 +15,7 @@
       max: 700,
       slide: function( event, ui ) {
         $( "#amount" ).val( "$" + ui.value );
+        console.log("Value of the slider is " + ui.value);
       }
     });
     $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
@@ -28,6 +30,7 @@
   <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
 </p>
 
+<h2>Slider</h2>
 <div id="slider-range-min"></div>
 
 
