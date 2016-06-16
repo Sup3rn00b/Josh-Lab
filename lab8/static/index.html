@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Controller</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+</head>
+<body>
+
+<h1>Go to heck, Here ofe my lab notes.</h1>
+These are some lab notes.
+
+<ul>
+    <li><a href="static/labs/lab6/lab6.html">Lab 6 Notes</a> </li>
+</ul>
+
+<p>
+    My Data:
+    <div id="mydata"> Nothing to see here. </div>
+<p>
+<input type="button" onclick="getMyData()" value="GET DATA">
+<input type="button" onclick="lightOn()" value="get ON the ball">
+    <input type="button" onclick="lightOff()" value="get OFF my lawn">
+
+    
+
+<script>
+var getMyData = function() {
+console.log("Getting data diggity dawg");
+$.get('/readData',function(data,status) {
+console.log("My Data: " + JSON.stringify(data));
+$("#mydata").html(JSON.stringify (data));
+});
+};
+
+var lightOn = function() {
+console.log("Getting data diggity dawg");
+$.get('/lightOn',function(data,status) {
+console.log("My Data: " + JSON.stringify(data));
+$("#mydata").html(JSON.stringify (data));
+});
+};
+
+var lightOff = function() {
+console.log("Getting data diggity dawg");
+$.get('/lightOff',function(data,status) {
+console.log("My Data: " + JSON.stringify(data));
+$("#mydata").html(JSON.stringify (data));
+});
+};
+</script>
+
+
+
+
+</body>
+</html>
