@@ -5,7 +5,7 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def index():
-    return flask.send_from_directory("static", "index.html")
+    return flask.send_from_directory("", "index.html")
 
 @app.route("/forward")
 def goForward():
