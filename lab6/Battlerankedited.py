@@ -1,4 +1,3 @@
-
 import time
 import random
 import RPi.GPIO as GPIO
@@ -61,8 +60,14 @@ listOfChance=[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2,2,2,2,2,1]
 
 def fight():
     currentmob=random.choice(listOfMobs)
-    lcd.message(currentmob)
-    #print (currentmob)
+    lcd.clear()
+    print ("Encounter!")
+    lcd.message("Attacked by...")
+    time.sleep(2)
+    #lcd.message(currentmob.__str__())
+    lcd.clear()
+    lcd.message("Attacked by\n"+currentmob.name+"!!!")
+    print (currentmob)
     time.sleep(1)
     if player.hp>currentmob.damage:
 
@@ -75,7 +80,7 @@ def fight():
     print()
 
 def shop():
-    prompt=input("Welcome to the shop! Would you like to buy something? >")
+    prompt=raw_input("Welcome to the shop! Would you like to buy something? >")
     if prompt==("yes") or prompt==("Yes"):
         if len(player.inv)==1:
             print("*You empty your bag of the",player.inv[0]+"...*")
@@ -99,6 +104,7 @@ def eat():
         print ("You have no food, what are you doing? >")
         time.sleep(1)
         print()
+        return
     print("*You eat the food in your bag...*")
     food=player.inv[0]
     player.hp=player.hp+food.heal
@@ -170,7 +176,7 @@ def main():
             sleep()
         elif (turn==2):
             shop()
-        choice=input("Would you like to continue on, or eat first? >")
+        choice=raw_input("Would you like to continue on, or eat first? >")
         if choice==("eat") or choice==("Eat") or choice==("eat first") or choice==("Eat first"):
             eat()
         elif choice==("continue on") or choice==("continue") or choice==("Continue") or choice==("Continue on"):
@@ -178,7 +184,7 @@ def main():
         fight()
     die()
     time.sleep(5)
-    input(">>>Press enter to quit.")
+    raw_input(">>>Press enter to quit.")
     lcd.clear()
 
 
