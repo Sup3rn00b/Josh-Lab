@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rover Controller</title>
+    <script src=""
+</head>
+<body>
+<h1>Rover Controller</h1>
+
+<span>Forward: <input type="button" onclick="goForward()" id="forward" value="Forward"> </span>
+<span>Stop: <input type="button" onclick="stopNow()" id="stop" value="Stop"> </span>
+
+
+<script>
+    var goForward = function() {
+        $.get('/forward', function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    var stopNow = function() {
+        $.get('/stop', function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+</script>
+</body>
+</html>
