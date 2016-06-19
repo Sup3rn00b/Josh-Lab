@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Rover Controller</title>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/home/lib/jquery-ui.css">
+    <script src="/home/lib/jquery-ui.js"></script>
+    <script src="/home/lib/jquery.js"></script>
   <script>
   $(function() {
     $( "#slider-range-min" ).slider({
@@ -39,12 +39,12 @@
 <span>Stop: <input type="button" onclick="stopNow()" id="stop" value="Stop"> </span>
 
 <script>
-    var goForward = function() {
+    var function goForward() {
         $.get('/forward', function(data, status) {
            console.log("got it: " + JSON.stringify(data));
         });
     };
-    var stopNow = function() {
+    var function stopNow() {
         $.get('/stop', function(data, status) {
            console.log("got it: " + JSON.stringify(data));
         });

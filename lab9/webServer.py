@@ -3,9 +3,11 @@ import json
 
 app = flask.Flask(__name__)
 
-@app.route("/home")
-def index():
-    return flask.send_from_directory("", "index.html")
+@app.route("/home/<path>")
+def index(path):
+    return flask.send_from_directory("", path)
+
+
 
 @app.route("/forward")
 def goForward():
@@ -15,4 +17,4 @@ def goForward():
 def stopNow():
     return json.dumps({'value':'stoping'})
 
-app.run(host="10.0.0.30", debug=True)
+app.run(debug=True)
