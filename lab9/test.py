@@ -5,17 +5,17 @@ GPIO.setmode(GPIO.BCM)
 
 tilt=Servo.Servo(14)
 pan=Servo.Servo(15)
-t = raw_input("...Now, What Tilt do you wish?")
-p = raw_input("...and the Pan?")
+tiltPos = raw_input("...Now, What Tilt do you wish?")
+panPos = raw_input("...and the Pan?")
 
 
-while t != "exit":
+while tiltPos != "exit":
     print("Understood...")
 
-    tilt.moveTo(int(t))
-    pan.moveTo(int(p))
+    tilt.moveTo(int(tiltPos))
+    pan.moveTo(int(panPos))
 
-    c=raw_input("...Now, What Tilt do you wish?")
-    p = raw_input("...and the Pan?")
+    tiltPos = raw_input("...Now, What Tilt do you wish?")
+    panPos = raw_input("...and the Pan?")
 
 GPIO.cleanup()
