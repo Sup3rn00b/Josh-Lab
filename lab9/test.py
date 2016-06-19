@@ -4,13 +4,18 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
 tilt=Servo.Servo(14)
-c = raw_input("...Now, What Tilt do you wish?")
-#todo that check for int
+pan=Servo.Servo(15)
+t = raw_input("...Now, What Tilt do you wish?")
+p = raw_input("...and the Pan?")
 
-while c != "exit":
+
+while t != "exit":
     print("Understood...")
-    # TODO: Test For Time Spacing
-    tilt.moveTo(int(c))
+
+    tilt.moveTo(int(t))
+    pan.moveTo(int(p))
+
     c=raw_input("...Now, What Tilt do you wish?")
+    p = raw_input("...and the Pan?")
 
 GPIO.cleanup()
