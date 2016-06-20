@@ -7,7 +7,9 @@ app = flask.Flask(__name__)
 def index(path):
     return flask.send_from_directory("", path)
 
-
+@app.route("/home/lib/<path>")
+def lib(path):
+    return flask.send_from_directory("lib", path)
 
 @app.route("/forward")
 def goForward():
@@ -17,4 +19,4 @@ def goForward():
 def stopNow():
     return json.dumps({'value':'stoping'})
 
-app.run(debug=True)
+app.run(host="10.0.0.30", debug=True)
