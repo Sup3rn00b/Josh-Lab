@@ -12,16 +12,44 @@
   $(function() {
     $("#slider-range-min" ).slider({
       range: "min",
+      value: 0,
+      min: 0,
+      max: 100,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( " " + ui.value + "%");
+        console.log("Value of the slider is " + ui.value);
+        motorSpeed(ui.value);
+      }
+    });
+
+    $("#slider-pan" ).slider({
+      range: "min",
       value: 90,
       min: 0,
       max: 180,
       slide: function( event, ui ) {
-        $( "#amount" ).val( " " + ui.value + " degrees");
-        console.log("Value of the slider is " + ui.value);
+        $("#pan").val( " " + ui.value + " degrees");
+        console.log("Pan of the slider is " + ui.value);
         setPan(ui.value);
       }
     });
-    $( "#amount" ).val( " " + $( "#slider-range-min" ).slider( "value" ) + " degrees");
+
+    $("#slider-tilt" ).slider({
+      range: "min",
+      value: 90,
+      min: 0,
+      max: 180,
+      slide: function( event, ui ) {
+        $( "#tilt" ).val( " " + ui.value + " degrees");
+        console.log("Tilt of the slider is " + ui.value);
+        setTilt(ui.value);
+      }
+    });
+    $( "#amount" ).val( " " + $( "#slider-range-min" ).slider( "value" ) + " %");
+    $( "#pan" ).val( " " + $( "#slider-pan" ).slider( "value" ) + " degrees");
+    $( "#tilt" ).val( " " + $( "#slider-tilt" ).slider( "value" ) + " degrees");
+
+
   });
   </script>
 </head>
@@ -30,21 +58,32 @@
 
 <a href="second.html"> Other Page </a>
 <p>
-  <label for="amount">Pan Angle:</label>
+  <label for="amount">Motor Speed:</label>
   <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
 </p>
 
 <h2>Motor Controls</h2>
+
 <input id='motorForward' type='button' value='Forward' onclick='motorForward()'>
 <input id='motorReverse' type='button' value='Reverse' onclick='motorReverse()'>
-<input id='motorReverse' type='button' value='Reverse' onclick='motorStop()'>
+<input id='motorReverse' type='button' value='Reverse' onclick='motorStop()'><p>
+
 <span> Motor Speed: <div id="slider-range-min"></div> </span>
 
 
 <h2>Pan/Tilt Servo Controls</h2>
 
-<span> Pan: <div id="slider-range-min"></div> </span>
-<span> Tilt: <div id="slider-range-min"></div> </span>
+<p>
+  <label for="pan">Pan Angle:</label>
+  <input type="text" id="pan" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<p>
+  <label for="tilt">Tilt Angle:</label>
+  <input type="text" id="tilt" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<span> Pan: <div id="slider-pan"></div> </span>
+<span> Tilt: <div id="slider-tilt"></div> </span>
 
 
 

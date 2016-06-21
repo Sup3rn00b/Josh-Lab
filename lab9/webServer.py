@@ -11,12 +11,29 @@ def index(path):
 def lib(path):
     return flask.send_from_directory("lib", path)
 
-@app.route("/forward")
-def goForward():
-    return json.dumps({'value':'going forward'})
+@app.route("/pan/<pan>")
+def setPan(pan):
+    return json.dumps({'cmd':'pan', 'value':pan})
 
-@app.route('/stop')
-def stopNow():
-    return json.dumps({'value':'stoping'})
+@app.route('/tilt/<tilt>')
+def setTilt(tilt):
+    return json.dumps({'cmd':'tilt', 'value':tilt})
 
-app.run(host="10.0.0.30", debug=True)
+@app.route('/motor/speed/<speed>')
+def stopNow(speed):
+    return json.dumps({'cmd':'motor', 'value':speed})
+
+@app.route('/motor/forward')
+def motorForward():
+    return json.dumps({'cmd':'motorForward'});
+
+@app.route('/motor/reverse')
+def motorReverse():
+    return json.dumps({'cmd':'motorReverse'});
+
+@app.route('/motor/stop')
+def motorStop():
+    return json.dumps({'cmd':'motorStop'});
+
+# app.run(host="10.0.0.30", debug=True)
+app.run(debug=True)
