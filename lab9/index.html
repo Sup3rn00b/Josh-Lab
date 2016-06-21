@@ -3,35 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>Rover Controller</title>
-    <link rel="stylesheet" href="/home/lib/jquery-ui.css">
-    <script src="/home/lib/jquery-ui.js"></script>
-    <script src="/home/lib/jquery.js"></script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <script src="lib/jquery.js"></script>
+    <link rel="stylesheet" href="lib/jquery-ui.css">
+    <script src="lib/jquery-ui.js"></script>
+    
   <script>
   $(function() {
-    $( "#slider-range-min" ).slider({
+    $("#slider-range-min" ).slider({
       range: "min",
-      value: 37,
-      min: 1,
-      max: 700,
+      value: 0,
+      min: 0,
+      max: 100,
       slide: function( event, ui ) {
-        $( "#amount" ).val( "$" + ui.value );
+        $( "#amount" ).val( " " + ui.value + "%");
         console.log("Value of the slider is " + ui.value);
+        motorSpeed(ui.value);
       }
     });
-    $( "#amount" ).val( "$" + $( "#slider-range-min" ).slider( "value" ) );
+
+    $("#slider-pan" ).slider({
+      range: "min",
+      value: 90,
+      min: 0,
+      max: 180,
+      slide: function( event, ui ) {
+        $("#pan").val( " " + ui.value + " degrees");
+        console.log("Pan of the slider is " + ui.value);
+        setPan(ui.value);
+      }
+    });
+
+    $("#slider-tilt" ).slider({
+      range: "min",
+      value: 90,
+      min: 0,
+      max: 180,
+      slide: function( event, ui ) {
+        $( "#tilt" ).val( " " + ui.value + " degrees");
+        console.log("Tilt of the slider is " + ui.value);
+        setTilt(ui.value);
+      }
+    });
+    $( "#amount" ).val( " " + $( "#slider-range-min" ).slider( "value" ) + " %");
+    $( "#pan" ).val( " " + $( "#slider-pan" ).slider( "value" ) + " degrees");
+    $( "#tilt" ).val( " " + $( "#slider-tilt" ).slider( "value" ) + " degrees");
+
+
   });
   </script>
 </head>
 <body>
 <h1>Rover Controller</h1>
 
+<a href="second.html"> Other Page </a>
 <p>
-  <label for="amount">Maximum price:</label>
+  <label for="amount">Motor Speed:</label>
   <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
 </p>
 
-<h2>Slider</h2>
-<div id="slider-range-min"></div>
+<h2>Motor Controls</h2>
+
+<input id='motorForward' type='button' value='Forward' onclick='motorForward()'>
+<input id='motorReverse' type='button' value='Reverse' onclick='motorReverse()'>
+<input id='motorReverse' type='button' value='Reverse' onclick='motorStop()'><p>
+
+<span> Motor Speed: <div id="slider-range-min"></div> </span>
+
+
+<h2>Pan/Tilt Servo Controls</h2>
+
+<p>
+  <label for="pan">Pan Angle:</label>
+  <input type="text" id="pan" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+<p>
+  <label for="tilt">Tilt Angle:</label>
+  <input type="text" id="tilt" readonly style="border:0; color:#f6931f; font-weight:bold;">
+</p>
+
+<span> Pan: <div id="slider-pan"></div> </span>
+<span> Tilt: <div id="slider-tilt"></div> </span>
 
 
 
@@ -39,16 +91,46 @@
 <span>Stop: <input type="button" onclick="stopNow()" id="stop" value="Stop"> </span>
 
 <script>
-    var function goForward() {
+    function motorForward() {
         $.get('/forward', function(data, status) {
            console.log("got it: " + JSON.stringify(data));
         });
     };
-    var function stopNow() {
-        $.get('/stop', function(data, status) {
+
+    function motorForward() {
+        $.get('/motor/forward', function(data, status) {
            console.log("got it: " + JSON.stringify(data));
         });
     };
+    function motorReverse() {
+        $.get('/motor/reverse', function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    function motorStop() {
+        $.get('/motor/stop', function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    function motorSpeed(value) {
+        $.get('/motor/speed/'+value, function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    
+    function setPan(value) {
+        console.log(value);
+        $.get('/pan/'+value, function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    function setTilt(value) {
+        console.log(value);
+        $.get('/tilt/'+value, function(data, status) {
+           console.log("got it: " + JSON.stringify(data));
+        });
+    };
+    
 </script>
 </body>
 </html>
