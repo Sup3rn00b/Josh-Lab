@@ -1,7 +1,13 @@
 import flask
 import json
+import Servo
+import RPi.GPIO as GPIO
+
+GPIO.setmode(GPIO.BCM)
 
 app = flask.Flask(__name__)
+panServo = Servo.Servo(14)
+tiltServo = Servo.Servo(15)
 
 @app.route("/home/<path>")
 def index(path):
@@ -13,10 +19,12 @@ def lib(path):
 
 @app.route("/pan/<pan>")
 def setPan(pan):
+    panServo.moveTo(pan)
     return json.dumps({'cmd':'pan', 'value':pan})
 
 @app.route('/tilt/<tilt>')
 def setTilt(tilt):
+    tiltServo.moveTo(tilt)
     return json.dumps({'cmd':'tilt', 'value':tilt})
 
 @app.route('/motor/speed/<speed>')
@@ -35,5 +43,5 @@ def motorReverse():
 def motorStop():
     return json.dumps({'cmd':'motorStop'});
 
-# app.run(host="10.0.0.30", debug=True)
-app.run(debug=True)
+app.run(host="10.0.0.30", debug=True)
+# app.run(debug=True)
