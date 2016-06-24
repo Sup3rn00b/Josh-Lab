@@ -1,7 +1,10 @@
 import flask
 import json
+import servo
 
 app = flask.Flask(__name__)
+
+pan = servo.Servo(14)
 
 @app.route("/home/<path>")
 def index(path):
