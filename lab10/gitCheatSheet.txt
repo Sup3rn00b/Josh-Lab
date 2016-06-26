@@ -1,0 +1,97 @@
+git 
+Git Commands:
+=============
+
+Getting Started:
+---------------
+    git init
+
+    git add .
+
+    git commit -m "comment"
+
+
+Looking at Status:
+------------------
+    git status
+
+Getting a project from a Remote Repo:
+-------------------------------------
+
+    git clone <git repository site>
+
+Pushing to a Remote Repo
+------------------------
+
+    git push origin master
+
+    git pull origin master
+    
+       - Can be http (https) or git servers
+
+Branching:
+----------
+
+    git branch <branchName>
+
+    git checkout <branchName>
+
+    git checkout -b <branchToCreateName>
+
+    git branch
+
+
+Branch Merging:
+---------------
+
+    git merge <branchName>
+
+                   branch2
+                  /-x---------x--x---\
+   master        /                    \
+  o----x------x------------x---x---------x--------->
+           \                               /
+	    \-x---x--------x--------x-----/
+	       branch1
+
+   Example:
+   ........
+       Create a repo.
+
+           git init
+	   git add .
+	   git commit -m "Initial version of the repo"
+
+      Make some changes
+
+      Commit the changes
+
+          git add .
+	  git commit -m "My first set of changes"
+
+      Create a branch off of master
+
+          git branch branch1
+	  
+      Change over to that branch
+
+          git checkout branch1
+
+      Make changes on branch1
+
+      Commit the changes
+
+          git add .
+	  git commit -m "changes to branch 1"
+	 
+      Merge them back to master
+
+          git checkout master
+	  git merge branch1
+
+
+
+
+
+           
+

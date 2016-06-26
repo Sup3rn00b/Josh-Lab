@@ -1,8 +1,7 @@
 import flask
 import json
-import RPi.GPIO as GPIO
-
 import Servo
+import RPi.GPIO as GPIO
 import Motor
 
 GPIO.setmode(GPIO.BCM)
@@ -14,6 +13,8 @@ motor = Motor.Motor(14,15,18)
 
 motor.forward()
 motor.setSpeed(0)
+
+pan = servo.Servo(14)
 
 @app.route("/home/<path>")
 def index(path):
