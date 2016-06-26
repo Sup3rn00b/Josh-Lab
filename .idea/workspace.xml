@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae29b4e7-c1f0-44d8-b9ab-270cb535aa5d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lab11/lab11.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Josh-Lab.iws" />
@@ -28,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/lab9/webServer.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
               </folding>
@@ -73,7 +72,7 @@
       <file leaf-file-name="lab11.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab11/lab11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.86431015">
+            <state vertical-scroll-proportion="1.3091537">
               <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
@@ -191,6 +190,174 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/Motor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/testmotor.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/webServer.py</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/Motor.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/MakeRemote</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/Makefile</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/README</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/UNLICENCE</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/build/lib.linux-armv7l-2.7/pigpio.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/build/lib/pigpio.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/command.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/command.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/command.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/custom.cext</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/libpigpio.so</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/libpigpiod_if.so</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/libpigpiod_if2.so</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pig2vcd</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pig2vcd.1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pig2vcd.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pig2vcd.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpio.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod.1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if.3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if2.3</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if2.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if2.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigpiod_if2.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigs.1</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigs.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/pigs.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/setup.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpio</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpio.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpio.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpio.py</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if2</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if2.c</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigpiod_if2.o</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pigs</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/PIGPIO/x_pipe</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/Servo.pyc</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/lab9/pigpio.zip</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -345,26 +512,32 @@
       <option name="project" value="LOCAL" />
       <updated>1466481506497</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added Lab11 Directory and Lab11file (1st version)">
+      <created>1466917090930</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1466917090930</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32928178" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -387,7 +560,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Wrote a test program aaaaaaaaaa" />
     <MESSAGE value="Fixed&#10; a test program&#10;  &#10;  &#10;  &#10;  aaaaaaaaaa" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed&#10; a test program&#10;  &#10;  &#10;  &#10;  aaaaaaaaaa" />
+    <MESSAGE value="Added Lab11 Directory and Lab11file (1st version)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Lab11 Directory and Lab11file (1st version)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -483,7 +657,7 @@
     <entry file="file://$PROJECT_DIR$/lab9/webServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
@@ -520,7 +694,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab11/lab11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.86431015">
+        <state vertical-scroll-proportion="1.3091537">
           <caret line="57" column="27" selection-start-line="57" selection-start-column="27" selection-end-line="57" selection-end-column="27" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
