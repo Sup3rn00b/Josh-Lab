@@ -12,11 +12,11 @@ class StepMotor:
         self.dpin=d
         self.enablePin=e
 
-        GPIO.setup(a,GPIO.OUT)
-        GPIO.setup(b,GPIO.OUT)
-        GPIO.setup(c,GPIO.OUT)
-        GPIO.setup(d,GPIO.OUT)
-        GPIO.setup(e,GPIO.OUT)
+        GPIO.setup(self.apin,GPIO.OUT)
+        GPIO.setup(self.bpin,GPIO.OUT)
+        GPIO.setup(self.cpin,GPIO.OUT)
+        GPIO.setup(self.dpin,GPIO.OUT)
+        GPIO.setup(self.enablePin,GPIO.OUT)
 
         self.enable(True)
 
@@ -59,3 +59,4 @@ if __name__ == "__main__":
     while choice!="exit":
         stepMotor.forward(int(choice))
         choice=raw_input("Steps? >>>")
+    GPIO.cleanup()
