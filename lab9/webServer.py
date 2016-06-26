@@ -1,17 +1,18 @@
 import flask
 import json
-<<<<<<< HEAD
-import servo
-=======
 import Servo
 import RPi.GPIO as GPIO
+import Motor
 
 GPIO.setmode(GPIO.BCM)
->>>>>>> 1eb369d14fa75b475eb3e13672dc14a40ee72d34
 
 app = flask.Flask(__name__)
-panServo = Servo.Servo(14)
-tiltServo = Servo.Servo(15)
+panServo = Servo.Servo(24)
+tiltServo = Servo.Servo(25)
+motor = Motor.Motor(14,15,18)
+
+motor.forward()
+motor.setSpeed(0)
 
 pan = servo.Servo(14)
 
@@ -35,18 +36,22 @@ def setTilt(tilt):
 
 @app.route('/motor/speed/<speed>')
 def stopNow(speed):
+    motor.setSpeed(int(speed))
     return json.dumps({'cmd':'motor', 'value':speed})
 
 @app.route('/motor/forward')
 def motorForward():
+    motor.forward()
     return json.dumps({'cmd':'motorForward'});
 
 @app.route('/motor/reverse')
 def motorReverse():
+    motor.reverse()
     return json.dumps({'cmd':'motorReverse'});
 
 @app.route('/motor/stop')
 def motorStop():
+    motor.stop()
     return json.dumps({'cmd':'motorStop'});
 
 app.run(host="10.0.0.30", debug=True)
