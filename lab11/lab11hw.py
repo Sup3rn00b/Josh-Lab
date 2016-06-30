@@ -4,11 +4,11 @@ import time
 GPIO.setmode(GPIO.BCM)
 
 class ViewFinder:
-    def __init__(self,a,b):
-        self.trigger=a
-        self.echo=b
-        GPIO.setup(a,GPIO.OUT)
-        GPIO.setup(b,GPIO.OUT)
+    def __init__(self,trig,echo):
+        self.trigger=trig
+        self.echo=echo
+        GPIO.setup(trig,GPIO.OUT)
+        GPIO.setup(echo,GPIO.OUT)
 
     def sendSignal(self):
         while GPIO.input(self.echo)==0:
@@ -24,4 +24,10 @@ class ViewFinder:
         distance = round(distance,2)
 
         return distance
+
+if __name__ == "__main__":
+
+    eyes = ViewFinder(14,15)
+
+    print (eyes.sendSignal(),"centimeters")
 
