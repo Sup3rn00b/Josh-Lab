@@ -8,9 +8,18 @@ class ViewFinder:
         self.trigger=trig
         self.echo=echo
         GPIO.setup(trig,GPIO.OUT)
-        GPIO.setup(echo,GPIO.OUT)
+        GPIO.setup(echo,GPIO.IN)
+        time.sleep(1)
 
     def sendSignal(self):
+
+        GPIO.output(self.trigger,False)
+        time.sleep(0.5)
+
+        GPIO.output(self.trigger,True)
+        time.sleep(0.00001)
+        GPIO.output(self.trigger,False)
+
         while GPIO.input(self.echo)==0:
             pulse_start=time.time()
 
@@ -30,4 +39,11 @@ if __name__ == "__main__":
     eyes = ViewFinder(14,15)
 
     print (eyes.sendSignal(),"centimeters")
-
+    time.sleep(1)
+    print (eyes.sendSignal(),"centimeters")
+    time.sleep(1)
+    print (eyes.sendSignal(),"centimeters")
+    time.sleep(1)
+    print (eyes.sendSignal(),"centimeters")
+    time.sleep(1)
+    print ("Done.")
