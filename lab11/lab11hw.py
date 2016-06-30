@@ -13,12 +13,16 @@ class ViewFinder:
 
     def sendSignal(self):
 
+	print("1")
+
         GPIO.output(self.trigger,False)
         time.sleep(0.5)
 
         GPIO.output(self.trigger,True)
         time.sleep(0.00001)
         GPIO.output(self.trigger,False)
+
+	print("2")
 
         while GPIO.input(self.echo)==0:
             pulse_start=time.time()
@@ -32,9 +36,13 @@ class ViewFinder:
 
         distance = round(distance,2)
 
+	print("3")
+
         return distance
 
 if __name__ == "__main__":
+
+    print("4")
 
     eyes = ViewFinder(14,15)
 
