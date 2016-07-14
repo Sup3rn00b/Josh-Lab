@@ -39,7 +39,7 @@ class Motor:
         GPIO.output(self.forwardPin, 0)
         GPIO.output(self.reversePin, 0)
 
-    def gas(self, amount):
+    def speed(self, amount):
         self.p.ChangeDutyCycle(float(amount))
         self.currentDutyCycle = float(amount)
 
@@ -66,14 +66,14 @@ if __name__ == "__main__":
             dc = saveDC = car.currentDutyCycle
 
             while (dc > 30):
-	        car.gas(dc)
+	        car.speed(dc)
 	        dc = dc - 2;
 		time.sleep(.1)
             car.stop()
-            car.gas(saveDC)
+            car.speed(saveDC)
         elif (cmd == 'g'):
-	    gass = raw_input("Gas: ")
-	    car.gas(gass)
+	    speed = raw_input("Gas: ")
+	    car.speed(speed)
         else:
             car.stop()
         cmd = raw_input("cmd>> ")

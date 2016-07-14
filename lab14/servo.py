@@ -28,7 +28,7 @@ class Servo:
         self.pwm.stop()
 
 if __name__ == "__main__":
-    gearbox=Servo(18)
+    gearbox=Servo(15)
 
     cmd = raw_input(">> ")
     while (cmd != "q"):
