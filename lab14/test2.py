@@ -29,7 +29,7 @@ time.sleep(1)
 neck.moveTo(leastFar-15)
 print("...Second Round Let's Go!...")
 
-for x in range(30)
+for x in range(30):
     neck.moveTo(leastFar+x)
     time.sleep(0.01)
     ph = eyes.distance()
