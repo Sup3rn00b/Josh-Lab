@@ -6,41 +6,43 @@ GPIO.setmode(GPIO.BCM)
 
 class WallFinder:
 
-    eyes=seeker.Range(24,23)
-    neck=servo.Servo(18)
+    def __init__(self,pan,tilt,seek):
 
-    def findWall(self,eyes,neck):
+        self.eyes=seek
+        self.neck=pan
+
+    def findWall(self):
         least=5000
         leastFar=0
         leastFar2=0
 
-        eyes.units("cm")
-        neck.moveTo(90)
+        self.eyes.units("cm")
+        self.neck.moveTo(90)
         time.sleep(1)
 
         for x in range(18):
-            neck.moveTo(x*10)
+            self.neck.moveTo(x*10)
             time.sleep(0.01)
-            ph = eyes.distance()
+            ph = self.eyes.distance()
             print(ph)
             time.sleep(0.2)
             if ph<least:
                 least=ph
                 leastFar=x
 
-        neck.moveTo(leastFar)
+        self.neck.moveTo(leastFar)
         time.sleep(1)
-        neck.moveTo(leastFar-15)
+        self.neck.moveTo(leastFar-15)
         print("...Second Round Let's Go!...")
 
         for x in range(30):
-            neck.moveTo(leastFar+x)
+            self.neck.moveTo(leastFar+x)
             time.sleep(0.01)
-            ph = eyes.distance()
+            ph = self.eyes.distance()
             print(ph)
             time.sleep(0.01)
             if ph<least:
                 least=ph
                 leastFar2=x
-        neck.moveTo(leastFar2)
+        self.neck.moveTo(leastFar2)
         print ("Here.")
