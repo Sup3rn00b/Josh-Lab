@@ -8,15 +8,16 @@ class WallFinder:
 
     def __init__(self,pan,tilt,seek):
 
-        self.eyes=seek
         self.neck=pan
+        self.eyes=seek
+        self.eyes.units("cm")
 
     def findWall(self):
         least=5000
         leastFar=0
         leastFar2=0
 
-        self.eyes.units("cm")
+
         self.neck.moveTo(90)
         time.sleep(1)
 
@@ -46,3 +47,11 @@ class WallFinder:
                 leastFar2=x
         self.neck.moveTo(leastFar2)
         print ("Here.")
+
+seeker=seeker.Range(24,23)
+panner=servo.Servo(18)
+tilter=servo.Servo(15)
+
+looker=WallFinder(panner,tilter,seeker)
+
+looker.findWall()
