@@ -9,8 +9,10 @@ class WallFinder:
     def __init__(self,pan,tilt,seek):
 
         self.neck=pan
+        self.tilt=tilt
         self.eyes=seek
         self.eyes.units("cm")
+        self.tilt.moveTo(80)
 
     def findWall(self):
         least=5000
