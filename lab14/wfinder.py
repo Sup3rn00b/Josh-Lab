@@ -23,9 +23,10 @@ class WallFinder:
 
         for x in range(18):
             self.neck.moveTo(x*10)
+            print("Angle:",x*10)
             time.sleep(0.01)
             ph = self.eyes.distance()
-            print(ph)
+            print("Distance:",ph)
             time.sleep(0.2)
             if ph<least:
                 least=ph
@@ -38,9 +39,10 @@ class WallFinder:
 
         for x in range(30):
             self.neck.moveTo(leastFar+x)
+            print("Angle:",leastFar+x)
             time.sleep(0.01)
             ph = self.eyes.distance()
-            print(ph)
+            print("Distance:",ph)
             time.sleep(0.01)
             if ph<least:
                 least=ph
