@@ -1,7 +1,5 @@
-import time
 import RPi.GPIO as GPIO
 
-GPIO.setmode(GPIO.BCM)
 
 class Servo:
 
@@ -21,14 +19,14 @@ class Servo:
 
     def moveTo(self, num):
         deg = self.numToDegrees(num)
-        print "PWM Setting: ", deg
         self.pwm.ChangeDutyCycle(deg)
 
     def stop(self):
         self.pwm.stop()
 
 if __name__ == "__main__":
-    gearbox=Servo(15)
+    GPIO.setmode(GPIO.BCM)
+    gearbox=Servo(10)
 
     cmd = raw_input(">> ")
     while (cmd != "q"):
