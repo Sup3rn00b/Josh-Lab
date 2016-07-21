@@ -26,13 +26,12 @@ class WallFinder:
 
         for x in range(18):
             self.neck.moveTo(x*10)
-            time.sleep(0.01)
+            time.sleep(0.2)
             ph = self.eyes.distance()
-            time.sleep(0.1)
+            time.sleep(0.2)
             distanceArray.append(ph)
+            print "Scan: ", x*10, " => ", ph
         return distanceArray
-
-
 
     def cornerDetect(self,dists):
         prev=self.UNSET
@@ -66,11 +65,12 @@ class WallFinder:
         mindex=ar.index(min(ar))
         leastAngle=mindex*10
         self.neck.moveTo(leastAngle)
-        print("Here.")
+        time.sleep(2);
+        print "Here:", leastAngle, " => ",  ar[mindex]
 
-seeker=seeker.Range(24,23)
-panner=servo.Servo(18)
-tilter=servo.Servo(15)
+seeker=seeker.Range(10,9)
+panner=servo.Servo(7)
+tilter=servo.Servo(8)
 
 looker=WallFinder(panner,tilter,seeker)
 

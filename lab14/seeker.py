@@ -48,7 +48,7 @@ class Range:
 
 if __name__ == "__main__":
 
-    eyes = Range(24, 23)
+    eyes = Range(10, 9)
     eyes.units("in")
 
     print eyes.distance(), eyes.unitStr
