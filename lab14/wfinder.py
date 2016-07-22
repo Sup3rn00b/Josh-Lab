@@ -74,4 +74,5 @@ tilter=servo.Servo(8)
 
 looker=WallFinder(panner,tilter,seeker)
 
-looker.findWall()
+#looker.findWall()
+looker.cornerDetect(looker.scanWall())
